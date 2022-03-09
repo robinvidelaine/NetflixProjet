@@ -19,19 +19,19 @@ pipeline {
 
                          }
                 }
+ stage('LoadWebPageIntoServer') { 
+            steps {
+                bat '''
+                    rmdir D:\\xampp\\htdocs\\netflixprojet\\movies
+                    del D:\\xampp\\htdocs\\netflixprojet\\netflix.html
+                    move C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\NetflixProjet\\out\\netflix.html D:\\xampp\\htdocs\\netflixprojet\\
+                '''
+                bat '''
+                    mkdir D:\\xampp\\htdocs\\netflixprojet\\movies
+                    copy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\NetflixProjet\\out\\movies D:\\xampp\\htdocs\\netflixprojet\\movies
+                '''
 
-               stage('LoadWebSite') { 
-                        steps {
-                            dir ('C:/xampp/htdocs/out/movies') {
-                                    deleteDir()
-                                }
-                                
-                                 fileExists('C:/xampp/htdocs/out/neflix.html')) {
-                                        File('C:/xampp/htdocs/out/neflix.html').delete()
-                                    }
-                                                            
-                            
-                        }
-               }
-       }
+            }
+        }
+    }
 }
