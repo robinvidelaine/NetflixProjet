@@ -22,12 +22,10 @@ pipeline {
 
                stage('LoadWebSite') { 
                         steps {
-                            bat '''
-                                    rmdir C:/xampp/htdocs/out/movies
-                                    del C:/xampp/htdocs/out/netflix.html
-                                    move C:/ProgramData/Jenkins/.jenkins/workspace/NetflixProjet/out/movies C:/xampp/htdocs/out
-                                    move C:/ProgramData/Jenkins/.jenkins/workspace/NetflixProjet/out/netflix.html C:/xampp/htdocs/out
-                            '''
+                            
+                                bat rmdir \"C:/xampp/htdocs/out/movies" /S
+                                    
+                            
                         }
                }
        }
