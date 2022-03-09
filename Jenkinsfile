@@ -25,10 +25,13 @@ pipeline {
                             dir ('C:/xampp/htdocs/out/movies') {
                                     deleteDir()
                                 }
-                           fileExists('C:/xampp/htdocs/out/neflix.html') {
-                                    new File('C:/xampp/htdocs/out/neflix.html').delete()
-                                }
-                                    
+                                
+                                 if (fileExists('C:/xampp/htdocs/out/neflix.html')) {
+                                        new File('C:/xampp/htdocs/out/neflix.html').delete()
+                                    } else {
+                                        println "neflix.html file not found"
+                                    }
+                                                            
                             
                         }
                }
