@@ -22,8 +22,9 @@ pipeline {
 
                stage('LoadWebSite') { 
                         steps {
-                            
-                                bat rmdir /"C:/xampp/htdocs/out/movies" /S
+                            dir ('C:/xampp/htdocs/out/movies') {
+                                    deleteDir()
+                                }
                                     
                             
                         }
