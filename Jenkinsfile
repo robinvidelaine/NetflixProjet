@@ -23,7 +23,7 @@ pipeline {
                stage('LoadWebSite') { 
                         steps {
                             
-                                bat rmdir \"C:/xampp/htdocs/out/movies" /S
+                                bat rmdir /"C:/xampp/htdocs/out/movies" /S
                                     
                             
                         }
