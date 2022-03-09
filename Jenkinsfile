@@ -22,7 +22,13 @@ pipeline {
        
            stage('load') { 
             steps {
-                bat("xcopy C:/ProgramData/Jenkins/.jenkins/workspace/NetflixProjet/out C:/xampp/htdocs/out")
+                fileOperations([fileCopyOperation(
+                  excludes: '',
+                  flattenFiles: false,
+                  includes: 'C:\\ProgramData\Jenkins\.jenkins\workspace\NetflixProjet\out\\**',
+                  targetLocation: "C:\\xampp\htdocs\out"
+                )]).
+                    
 
                 }
             }
