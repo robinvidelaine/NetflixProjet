@@ -25,8 +25,8 @@ pipeline {
                             dir ('C:/xampp/htdocs/out/movies') {
                                     deleteDir()
                                 }
-                            dir ('C:/xampp/htdocs/out/neflix.html') {
-                                    deleteDir()
+                           fileExists('C:/xampp/htdocs/out/neflix.html') {
+                                    new File('C:/xampp/htdocs/out/neflix.html').delete()
                                 }
                                     
                             
