@@ -17,9 +17,8 @@ pipeline {
             }
         stage('Build') { 
             steps {
-                sh 'mvn clean package'
                 java 'java -jar  netflix-1.0.0.jar  ../netflix_titles.csv'
-            
+                echo'build'
                 }
             }
         }
