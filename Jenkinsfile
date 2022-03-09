@@ -25,6 +25,9 @@ pipeline {
                             dir ('C:/xampp/htdocs/out/movies') {
                                     deleteDir()
                                 }
+                            dir ('C:/xampp/htdocs/out/neflix.html') {
+                                    deleteDir()
+                                }
                                     
                             
                         }
