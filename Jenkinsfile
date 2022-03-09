@@ -17,6 +17,12 @@ pipeline {
             }
         stage('Build') { 
             steps {
+                sh 'mvn clean package'
+                echo'build'
+                }
+            }
+        stage('Run') { 
+            steps {
                 sh returnStdout: true, script: 'java -jar  netflix-1.0.0.jar  ../netflix_titles.csv'
                 echo'build'
                 }
