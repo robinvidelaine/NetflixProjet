@@ -14,7 +14,7 @@ pipeline {
             }
         stage('Run') { 
             steps {
-                bat returnStdout: true, script: 'java -jar  netflix-1.0.0.jar  ../netflix_titles.csv'
+                bat returnStdout: true, script: 'java -jar  target/netflix-1.0.0.jar  /netflix_titles.csv'
                 echo'build'
                 }
             }
