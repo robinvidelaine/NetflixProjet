@@ -19,5 +19,12 @@ pipeline {
 
                 }
             }
+       
+           stage('load') { 
+            steps {
+                bat("xcopy C:\ProgramData\Jenkins\.jenkins\workspace\NetflixProjet\out C:\xampp\htdocs\out /O /X /E /H /K")
+
+                }
+            }
         }
     }
