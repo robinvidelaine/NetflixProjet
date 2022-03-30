@@ -25,8 +25,10 @@ pipeline {
                     rmdir /s C:\\xampp\\htdocs\\out\\movies
                     del /s C:\\xampp\\htdocs\\out\\netflix.html
                     mkdir C:\\xampp\\htdocs\\out\\movies
-                    move /y C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\NetflixProjet\\out\\*.html  C:\\xampp\\htdocs\\out\\movies
+                    move /y C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\NetflixProjet\\out\\*.html  C:\\xampp\\htdocs\\out
+                    move /y C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\NetflixProjet\\out\\movies\\*.html  C:\\xampp\\htdocs\\out\\movies
                 '''
+              
             }
         }
     }
